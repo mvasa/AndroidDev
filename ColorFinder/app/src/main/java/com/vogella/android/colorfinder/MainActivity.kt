@@ -124,7 +124,10 @@ class MainActivity : AppCompatActivity()  {
 
 val currentColor = colors[inc]
         //to write to file
-        File("C:/Users/manoj/Desktop/sort_these/Colors.txt").printWriter().use { out -> out.println(currentColor) }
+        val file = File(filesDir, "Colors.txt")
+        val f = file.printWriter()
+        f.write("hello")
+        Log.i("save", "success")
 
         //to read from file
         //val input : InputStream = File("C:\\Users\\manoj\\Desktop\\sort these\\Colors.txt").inputStream()
